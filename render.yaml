@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: stemlab-ai
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: AUDIOSHAKE_API_KEY
+        sync: false
+      - key: MAX_UPLOAD_MB
+        value: "100"
